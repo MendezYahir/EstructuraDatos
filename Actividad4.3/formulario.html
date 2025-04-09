@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario con pestañas y diálogos de archivos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <h2 class="mb-4">Gestión de Archivos</h2>
+
+  <ul class="nav nav-tabs" id="tabPanel" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="cargar-tab" data-bs-toggle="tab" data-bs-target="#cargar" type="button" role="tab">Cargar Archivo</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="guardar-tab" data-bs-toggle="tab" data-bs-target="#guardar" type="button" role="tab">Guardar Archivo</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="tabPanelContent">
+    <!-- Pestaña Cargar -->
+    <div class="tab-pane fade show active" id="cargar" role="tabpanel">
+      <div class="mb-3">
+        <label for="fileInput" class="form-label">Selecciona un archivo:</label>
+        <input class="form-control" type="file" id="fileInput">
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="guardar" role="tabpanel">
+      <div class="mb-3">
+        <label for="textToSave" class="form-label">Contenido del archivo:</label>
+        <textarea class="form-control" id="textToSave" rows="4">Este es un archivo generado desde JavaScript.</textarea>
+      </div>
+      <button class="btn btn-success" onclick="guardarArchivo()">Guardar Archivo</button>
+    </div>
+  </div>
+
+  <script src="Scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
